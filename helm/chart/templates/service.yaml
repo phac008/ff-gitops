@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ff
+  namespace: suxess-it-prod
+  labels:
+    app: ff
+    backstage.io/kubernetes-id: ff
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: ff
+  type: ClusterIP

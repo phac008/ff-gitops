@@ -1,0 +1,8 @@
+site_name: "ff"
+site_description: "Documentation for ff"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core

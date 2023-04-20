@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ff
+  namespace: suxess-it-prod
+  labels:
+    app: ff
+    backstage.io/kubernetes-id: ff
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ff
+  template:
+    metadata:
+      labels:
+        app: ff
+        backstage.io/kubernetes-id: ff
+    spec:
+      containers:
+#      - image: quay.io/rbaumgar/monitor-demo-app-jvm
+      - image: quay.io/rbaumgar/monitor-demo-app-jvm
+        imagePullPolicy: Always
+        name: ff

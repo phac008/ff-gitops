@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ff-ingress
+  namespace: suxess-it-prod
+  labels:
+    app: ff
+    backstage.io/kubernetes-id: ff
+spec:
+  rules:
+  - host: ff-suxess-it-prod.apps.cluster1.mcp.pitagora.at
+    http:
+      paths:
+      - backend:
+          service:
+            name: ff
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix

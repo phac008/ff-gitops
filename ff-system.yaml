@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ff
+  description: ff
+  labels:
+    environments: prod
+spec:
+  owner: group:default/guest
